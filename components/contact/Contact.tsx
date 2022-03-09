@@ -68,7 +68,11 @@ export default function Contact(props: ContactProps) {
             </VStack>
           </HStack>
           <HStack>
-            <Button bg="#FD5701" marginRight="10px" onClick={onOpen}>
+            <Button
+              colorScheme={"messenger"}
+              marginRight="10px"
+              onClick={onOpen}
+            >
               Contact Me
             </Button>
             {/* <ContactModal>
@@ -113,7 +117,7 @@ export default function Contact(props: ContactProps) {
               isExternal={true}
               href="https://www.linkedin.com/in/bennettdesmond/"
             >
-              <Button bg="#FD5701" marginLeft="10px">
+              <Button colorScheme={"messenger"} marginLeft="10px">
                 LinkedIn
               </Button>
             </Link>
