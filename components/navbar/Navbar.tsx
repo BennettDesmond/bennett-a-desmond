@@ -12,6 +12,7 @@ import {
   useColorModeValue,
   useColorMode,
   Stack,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 
@@ -49,7 +50,12 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box>Logo</Box>
+            <Image
+              boxSize="70px"
+              objectFit="cover"
+              src="../Bennett_Logo-01.svg"
+              alt="Bennett Desmond Logo"
+            />
             <HStack
               as={"nav"}
               spacing={4}

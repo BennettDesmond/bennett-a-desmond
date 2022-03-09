@@ -5,7 +5,7 @@ interface AboutProps {}
 export default function About(props: AboutProps) {
   return (
     <>
-      <Box borderRadius="35px" bg="#C9D4D8">
+      <Box marginTop="50px" borderRadius="35px" bg="#C9D4D8">
         <VStack marginX="10%" color="white" align="center" spacing={4}>
           <Heading color="#FD5701" marginTop="3%">
             My Journey
