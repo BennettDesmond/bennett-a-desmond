@@ -5,10 +5,12 @@ interface AboutProps {}
 export default function About(props: AboutProps) {
   return (
     <>
-      <Box borderRadius="35px" bg="#FD5701">
+      <Box borderRadius="35px" bg="#C9D4D8">
         <VStack marginX="10%" color="white" align="center" spacing={4}>
-          <Heading marginTop="3%">My Journey</Heading>
-          <Text paddingBottom="5%" align="center">
+          <Heading color="#FD5701" marginTop="3%">
+            My Journey
+          </Heading>
+          <Text color="black" paddingBottom="5%" align="center">
             I am a Senior at Portland State University, where I am pursuing a
             degree in Computer Science. I am on target to graduate in June. I
             started my coding journey in my early teens. My first language I
