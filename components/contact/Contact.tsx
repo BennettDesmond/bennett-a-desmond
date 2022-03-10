@@ -37,7 +37,7 @@ export default function Contact(props: ContactProps) {
     <>
       <Box>
         <VStack spacing="10">
-          <Heading color="#FD5701">Get In Touch</Heading>
+          <Heading color="black">Get In Touch</Heading>
           <HStack>
             <Text w="50%" align="center" color="grey">
               I am currently looking for a software engineering position. Please
@@ -75,44 +75,7 @@ export default function Contact(props: ContactProps) {
             >
               Contact Me
             </Button>
-            {/* <ContactModal>
-              isOpen={isOpen()}
-              onClose={onClose()}
-            </ContactModal> */}
-            <Modal
-              isOpen={isOpen}
-              onClose={onClose}
-              scrollBehavior="inside"
-              size="lg"
-            >
-              <ModalContent
-                h="360px"
-                w={{ base: "350px", md: "500px", lg: "650px" }}
-                mt="105px"
-                borderRadius="20"
-                shadow="dark-lg"
-                bg="white"
-              >
-                <ModalHeader>
-                  <Center fontSize="3xl" fontWeight="bold">
-                    Contact Me
-                  </Center>
-                </ModalHeader>
-                <ModalCloseButton />
-                <ModalBody pb={6} mx="15px">
-                  <VStack spacing="4">
-                    <Input borderRadius={10} placeholder="Full Name" />
-                    <Input borderRadius={10} placeholder="Email Address" />
-                    <Textarea borderRadius={10} placeholder="Message" />
-                  </VStack>
-                </ModalBody>
-                <ModalFooter>
-                  <Button bg="#FD5701" mr={3} onClick={onClose}>
-                    Submit
-                  </Button>
-                </ModalFooter>
-              </ModalContent>
-            </Modal>
+            <ContactModal isOpen={isOpen} onClose={onClose} />
             <Link
               isExternal={true}
               href="https://www.linkedin.com/in/bennettdesmond/"

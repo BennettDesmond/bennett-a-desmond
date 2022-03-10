@@ -1,16 +1,11 @@
-import {
-    Text,
-} from '@chakra-ui/react'
+import { Heading } from "@chakra-ui/react";
 
-interface ExperienceProps {
-}
+interface ExperienceProps {}
 
 export default function Experience(props: ExperienceProps) {
-    return (
-        <>
-            <Text>
-                Experience Section
-            </Text>
-        </>
-    )
+  return (
+    <>
+      <Heading>Experience Section</Heading>
+    </>
+  );
 }

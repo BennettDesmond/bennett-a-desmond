@@ -5,9 +5,11 @@ import {
   ModalCloseButton,
   ModalBody,
   Center,
-  Text,
-  OrderedList,
-  ListItem,
+  VStack,
+  Input,
+  Textarea,
+  Button,
+  ModalFooter,
 } from "@chakra-ui/react";
 
 interface props {
@@ -29,9 +31,9 @@ export default function ContactModal(props: props) {
           h="360px"
           w={{ base: "350px", md: "500px", lg: "650px" }}
           mt="105px"
-          bg="primary.white"
           borderRadius="20"
           shadow="dark-lg"
+          bg="white"
         >
           <ModalHeader>
             <Center fontSize="3xl" fontWeight="bold">
@@ -39,7 +41,18 @@ export default function ContactModal(props: props) {
             </Center>
           </ModalHeader>
           <ModalCloseButton />
-          <ModalBody pb={6} mx="15px"></ModalBody>
+          <ModalBody pb={6} mx="15px">
+            <VStack spacing="4">
+              <Input borderRadius={10} placeholder="Full Name" />
+              <Input borderRadius={10} placeholder="Email Address" />
+              <Textarea borderRadius={10} placeholder="Message" />
+            </VStack>
+          </ModalBody>
+          <ModalFooter>
+            <Button bg="#FD5701" mr={3} onClick={onClose}>
+              Submit
+            </Button>
+          </ModalFooter>
         </ModalContent>
       </Modal>
     </>
