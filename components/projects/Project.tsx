@@ -28,7 +28,7 @@ export default function Project(props: ProjectProps) {
     gitHubRepo,
   } = props;
   return (
-    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+    <Box maxW="sm" borderWidth="1px" borderRadius="35px" overflow="hidden">
       <Image src={imageUrl} alt={imageAlt} />
       <Box p="6">
         <Box display="flex" alignItems="baseline">

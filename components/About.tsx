@@ -18,7 +18,7 @@ export default function About(props: AboutProps) {
         marginTop="50px"
         borderRadius="35px"
         bg="gray.100"
-        height="600px"
+        height={{ base: "800px", md: "600px" }}
       >
         <VStack
           marginX="10%"

@@ -10,15 +10,6 @@ import {
   VStack,
   HStack,
   useDisclosure,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalFooter,
-  ModalBody,
-  Center,
-  Input,
-  Textarea,
 } from "@chakra-ui/react";
 import { EmailIcon, InfoOutlineIcon } from "@chakra-ui/icons";
 import ContactModal from "./ContactModal";
@@ -38,8 +29,8 @@ export default function Contact(props: ContactProps) {
       <Box id="contact">
         <VStack spacing="10">
           <Heading>Contact</Heading>
-          <HStack>
-            <Text w="50%" align="center">
+          <Flex direction={{ base: "column", lg: "row" }}>
+            <Text w={{ md: "100%", lg: "50%" }} align="center">
               I am currently looking for a software engineering position. Please
               reach out if you are interested in hiring me. I also love to
               connect with innovators across industries. Feel free to shoot me a
@@ -49,7 +40,12 @@ export default function Contact(props: ContactProps) {
             </Text>
             {/* <Divider orientation="vertical" width="10%" /> */}
             <Spacer w="50px" />
-            <VStack direction="column" w="50%" align="center">
+            <VStack
+              direction="column"
+              w={{ md: "100%", lg: "50%" }}
+              align="center"
+              mt={{ base: "5%", lg: "0%" }}
+            >
               <Spacer />
               <HStack>
                 <EmailIcon marginRight="15px" />
@@ -62,24 +58,26 @@ export default function Contact(props: ContactProps) {
               </Flex>
               <Spacer />
             </VStack>
-          </HStack>
+          </Flex>
           <HStack>
-            <Button
-              colorScheme={"messenger"}
-              marginRight="10px"
-              onClick={onOpen}
-            >
-              Contact Me
-            </Button>
-            <ContactModal isOpen={isOpen} onClose={onClose} />
-            <Link
-              isExternal={true}
-              href="https://www.linkedin.com/in/bennettdesmond/"
-            >
-              <Button colorScheme={"messenger"} marginLeft="10px">
-                LinkedIn
+            <Box mr="10%">
+              <Button
+                colorScheme={"messenger"}
+                // marginRight="10px"
+                onClick={onOpen}
+              >
+                Contact Me
               </Button>
-            </Link>
+            </Box>
+            <ContactModal isOpen={isOpen} onClose={onClose} />
+            <Box>
+              <Link
+                isExternal={true}
+                href="https://www.linkedin.com/in/bennettdesmond/"
+              >
+                <Button colorScheme={"messenger"}>LinkedIn</Button>
+              </Link>
+            </Box>
           </HStack>
         </VStack>
       </Box>

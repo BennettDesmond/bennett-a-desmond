@@ -19,12 +19,12 @@ export default function Experiences(props: ExperiencesProps) {
       <Heading id="experience">Experience Section</Heading>
       <Tabs
         w={{ lg: "1000px" }}
-        orientation="vertical"
+        // orientation="vertical"
         variant="soft-rounded"
         colorScheme="green"
       >
         <TabList>
-          <Tab w="300px">Apex Fintech Solutions</Tab>
+          <Tab w="210px">Apex Fintech Solutions</Tab>
           <Tab>Multnomah County</Tab>
         </TabList>
         <TabPanels>
