@@ -17,7 +17,7 @@ const property = {
 export default function Projects(props: ProjectsProps) {
   return (
     <>
-      <Heading>Projects Section</Heading>
+      <Heading id="projects">Projects</Heading>
       <HStack spacing="4">
         <Project
           imageUrl={"../fillerImage.jpg"}

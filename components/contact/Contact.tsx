@@ -35,11 +35,11 @@ export default function Contact(props: ContactProps) {
   // } = useDisclosure();
   return (
     <>
-      <Box>
+      <Box id="contact">
         <VStack spacing="10">
-          <Heading color="black">Get In Touch</Heading>
+          <Heading>Contact</Heading>
           <HStack>
-            <Text w="50%" align="center" color="grey">
+            <Text w="50%" align="center">
               I am currently looking for a software engineering position. Please
               reach out if you are interested in hiring me. I also love to
               connect with innovators across industries. Feel free to shoot me a
@@ -53,16 +53,12 @@ export default function Contact(props: ContactProps) {
               <Spacer />
               <HStack>
                 <EmailIcon marginRight="15px" />
-                <Heading color="grey" size="md">
-                  Bennett.a.desmond@gmail.com
-                </Heading>
+                <Heading size="md">Bennett.a.desmond@gmail.com</Heading>
               </HStack>
               <Spacer />
               <Flex direction="row" align="center">
                 <InfoOutlineIcon marginRight="15px" />
-                <Heading color="grey" size="md">
-                  Portland, Oregon
-                </Heading>
+                <Heading size="md">Portland, Oregon</Heading>
               </Flex>
               <Spacer />
             </VStack>

@@ -49,7 +49,7 @@ export default function ContactModal(props: props) {
             </VStack>
           </ModalBody>
           <ModalFooter>
-            <Button bg="#FD5701" mr={3} onClick={onClose}>
+            <Button colorScheme={"messenger"} mr={3} onClick={onClose}>
               Submit
             </Button>
           </ModalFooter>

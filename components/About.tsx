@@ -13,7 +13,13 @@ interface AboutProps {}
 export default function About(props: AboutProps) {
   return (
     <>
-      <Box marginTop="50px" borderRadius="35px" bg="gray.100" height="600px">
+      <Box
+        id="about"
+        marginTop="50px"
+        borderRadius="35px"
+        bg="gray.100"
+        height="600px"
+      >
         <VStack
           marginX="10%"
           marginY="10%"
@@ -21,7 +27,7 @@ export default function About(props: AboutProps) {
           align="center"
           spacing={4}
         >
-          <Heading color="black">My Journey</Heading>
+          <Heading color="black">About</Heading>
           <Text color="black">
             I am a Senior at Portland State University, where I am pursuing a
             degree in Computer Science. I am on target to graduate in June. I

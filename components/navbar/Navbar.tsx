@@ -1,6 +1,6 @@
 import { SiLinkedin } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
-import { ReactNode } from "react";
+import NavLink from "./NavLink";
 import {
   Box,
   Flex,
@@ -9,7 +9,6 @@ import {
   IconButton,
   Button,
   useDisclosure,
-  useColorModeValue,
   useColorMode,
   Stack,
   Image,
@@ -18,23 +17,7 @@ import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Links = ["About", "Experience", "Projects", "Contact"];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
-    }}
-    href={"#"}
-    fontWeight="semibold"
-  >
-    {children}
-  </Link>
-);
-
-export default function Simple() {
+export default function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -53,7 +36,11 @@ export default function Simple() {
             <Image
               boxSize="70px"
               objectFit="cover"
-              src="../Bennett_Logo-01.svg"
+              src={
+                colorMode === "light"
+                  ? "../Bennett_Logo_BLACK.svg"
+                  : "../Bennett_Logo_WHITE.svg"
+              }
               alt="Bennett Desmond Logo"
             />
             <HStack
@@ -62,7 +49,11 @@ export default function Simple() {
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink
+                  key={link}
+                  linkText={link}
+                  link={link.toLowerCase()}
+                ></NavLink>
               ))}
             </HStack>
           </HStack>
@@ -90,7 +81,11 @@ export default function Simple() {
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink
+                  key={link}
+                  linkText={link}
+                  link={link.toLowerCase()}
+                ></NavLink>
               ))}
             </Stack>
           </Box>
