@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar/NavBar";
 import Overview from "../components/Overview";
 import About from "../components/About";
-import Experience from "../components/Experience";
+import Experiences from "../components/experience/Experiences";
 import Projects from "../components/projects/Projects";
 import Contact from "../components/contact/Contact";
 import { Box, VStack } from "@chakra-ui/react";
@@ -22,7 +22,7 @@ export default function Home() {
         <VStack spacing={20}>
           <Overview></Overview>
           <About></About>
-          <Experience></Experience>
+          <Experiences></Experiences>
           <Projects></Projects>
           <Contact></Contact>
         </VStack>
