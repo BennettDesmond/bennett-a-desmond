@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import NavBar from "../components/navbar/NavBar";
+import NavBar from "../components/navbar/NavBar";
 import Overview from "../components/Overview";
 import About from "../components/About";
 import Experiences from "../components/experience/Experiences";
@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/Bennett_Logo-01.svg" />
       </Head>
       <Box marginX="10%">
-        {/* <NavBar></NavBar> */}
+        <NavBar></NavBar>
         <VStack spacing={20}>
           <Overview></Overview>
           <About></About>
