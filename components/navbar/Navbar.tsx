@@ -15,9 +15,11 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 
+interface NavBarProps {}
+
 const Links = ["About", "Experience", "Projects", "Contact"];
 
-export default function NavBar() {
+export default function NavBar(props: NavBarProps) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
